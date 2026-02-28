@@ -1,8 +1,7 @@
-# 💍 SVN Jewellery – "Wear Your Glow"
+# 💍 SVN Jewellery
 
-<p align="center"> <b>Wear Your Glow ✨</b> </p> <p align="center"> A modern full-stack jewellery e-commerce platform built using MERN + TypeScript </p>
+<p align="center"> <b>Wear Your Glow </b> </p> <p align="center"> SVN Jewellery is a modern e-commerce platform designed to deliver an affordable luxury shopping experience through an elegant and responsive interface. Built using MERN + TypeScript, it showcases scalable architecture, smooth UI interactions, and real-world shopping workflows. </p>
 
-x
 
 🌟 Brand Identity
 
