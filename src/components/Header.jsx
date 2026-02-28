@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingBag, Heart, Search, Menu, X, ChevronDown } from 'lucide-react';
+import { ShoppingBag, Heart, Search, Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
+import { useTheme } from '../context/ThemeContext';
 import { categories, occasions } from '../data/products';
 import './Header.css';
 
 export default function Header() {
     const { cartCount, wishlistCount } = useStore();
+    const { theme, toggleTheme } = useTheme();
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);
@@ -125,6 +127,9 @@ export default function Header() {
 
                     {/* Actions */}
                     <div className="header__actions">
+                        <button className="header__action-btn header__theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+                            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                        </button>
                         <button className="header__action-btn" onClick={() => setSearchOpen(!searchOpen)} aria-label="Search">
                             <Search size={20} />
                         </button>
