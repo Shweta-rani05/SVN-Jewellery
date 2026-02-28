@@ -37,6 +37,10 @@ Type-safe architecture
 Luxury motion UI
 Real-world ecommerce logic
 
+## 🚀 Live Demo
+
+🌐 https://svn-jewellery.vercel.app/
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
@@ -144,6 +148,9 @@ NEXTAUTH_SECRET=your_auth_secret
 npm run dev
 
 ```
+
+
+
 
 
 ## 🤝 Contributing
