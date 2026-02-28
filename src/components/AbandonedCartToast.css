@@ -1,0 +1,63 @@
+/* Abandoned Cart Toast */
+.abandoned-toast {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    max-width: 320px;
+    padding: var(--space-lg);
+    background: rgba(15, 31, 61, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--gold-500);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-gold);
+    z-index: var(--z-toast);
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+}
+
+.abandoned-toast__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--white-50);
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast);
+}
+
+.abandoned-toast__close:hover {
+    color: var(--white);
+}
+
+.abandoned-toast__icon {
+    color: var(--gold-400);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.abandoned-toast__title {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.abandoned-toast__text {
+    font-size: 0.85rem;
+    color: var(--white-70);
+    line-height: 1.5;
+}
+
+.abandoned-toast__text strong {
+    color: var(--gold-400);
+}
+
+@media (max-width: 480px) {
+    .abandoned-toast {
+        left: 16px;
+        right: 16px;
+        bottom: 80px;
+        max-width: none;
+    }
+}

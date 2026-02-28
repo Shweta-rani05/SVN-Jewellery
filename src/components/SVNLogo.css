@@ -1,0 +1,49 @@
+/* SVN Logo Component */
+.svn-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.svn-logo svg {
+    display: block;
+}
+
+/* Size variants */
+.svn-logo--sm svg {
+    width: 52px;
+    height: 52px;
+}
+
+.svn-logo--md svg {
+    width: 80px;
+    height: 80px;
+}
+
+.svn-logo--lg svg {
+    width: 260px;
+    height: 260px;
+    filter: drop-shadow(0 8px 40px rgba(30, 58, 138, 0.5));
+}
+
+/* Hover effect for interactive contexts */
+.svn-logo--sm:hover svg {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .svn-logo--lg svg {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .svn-logo--lg svg {
+        width: 160px;
+        height: 160px;
+    }
+}
