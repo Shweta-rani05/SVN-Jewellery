@@ -115,43 +115,6 @@ Others (Git and Github)
 
 ---
 
-## 🏁 Getting Started
-
-1. **Clone the Repository:**
-```bash
-git clone https://github.com/Shweta-rani05/SVN-Jewellery.git
-
-```
-
-
-2. **Install Dependencies:**
-```bash
-npm install
-
-```
-
-
-3. **Setup Environment Variables:**
-Create a `.env` file in the root directory and add your credentials:
-```env
-MONGODB_URI=your_mongodb_uri
-STRIPE_SECRET_KEY=your_stripe_key
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-NEXTAUTH_SECRET=your_auth_secret
-
-```
-
-
-4. **Run Development Server:**
-```bash
-npm run dev
-
-```
-
-
-
-
-
 ## 🤝 Contributing
 This project was created to showcase full-stack development capabilities. Feedback, suggestions, and improvements are always welcome. Feel free to open an issue or submit a pull request.
 
