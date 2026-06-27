@@ -7,7 +7,7 @@ import './SVNLogo.css';
  *
  * @param {'sm'|'md'|'lg'} size - sm (navbar), md (footer), lg (hero)
  */
-export default function SVNLogo({ size = 'md', className = '' }) {
+export default function SVNLogo({ size = 'md', className = ' ' }) {
     return (
         <div className={`svn-logo svn-logo--${size} ${className}`}>
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="SVN — Wear Your Glow">

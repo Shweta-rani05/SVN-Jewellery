@@ -1,8 +1,20 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { Instagram, Twitter, Facebook, Youtube, Mail, MapPin, Phone, Shield } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer() {
+    const [email, setEmail] = useState('');
+    const [subscribed, setSubscribed] = useState(false);
+
+    const handleSubscribe = (e) => {
+        e.preventDefault();
+        if (email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            setSubscribed(true);
+            setEmail('');
+        }
+    };
+
     return (
         <footer className="footer">
             {/* Newsletter */}
@@ -13,10 +25,20 @@ export default function Footer() {
                             <h3>Join the Glow</h3>
                             <p>Subscribe for exclusive drops, early access & styling tips</p>
                         </div>
-                        <form className="footer__newsletter-form" onSubmit={e => e.preventDefault()}>
-                            <input type="email" placeholder="Enter your email" />
-                            <button type="submit" className="btn btn-primary">Subscribe</button>
-                        </form>
+                        {subscribed ? (
+                            <p style={{ color: 'var(--gold-400)', fontWeight: '500' }}>✨ Thank you for subscribing! Keep glowing. ✨</p>
+                        ) : (
+                            <form className="footer__newsletter-form" onSubmit={handleSubscribe}>
+                                <input 
+                                    type="email" 
+                                    placeholder="Enter your email" 
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                    required
+                                />
+                                <button type="submit" className="btn btn-primary">Subscribe</button>
+                            </form>
+                        )}
                     </div>
                 </div>
             </div>
@@ -39,10 +61,10 @@ export default function Footer() {
                                 loved, and cherished — blending organic elegance with contemporary sophistication.
                             </p>
                             <div className="footer__social">
-                                <a href="#" aria-label="Instagram"><Instagram size={18} /></a>
-                                <a href="#" aria-label="Twitter"><Twitter size={18} /></a>
-                                <a href="#" aria-label="Facebook"><Facebook size={18} /></a>
-                                <a href="#" aria-label="YouTube"><Youtube size={18} /></a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><Twitter size={18} /></a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={18} /></a>
+                                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><Youtube size={18} /></a>
                             </div>
                         </div>
 

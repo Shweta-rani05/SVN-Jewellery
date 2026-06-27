@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ShoppingBag, Heart, Search, Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 import { useTheme } from '../context/ThemeContext';
@@ -13,7 +13,9 @@ export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);
     const [searchOpen, setSearchOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -25,6 +27,15 @@ export default function Header() {
         setMobileOpen(false);
         setActiveMenu(null);
     }, [location]);
+
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
+        if (searchQuery.trim()) {
+            navigate(`/category/all?search=${encodeURIComponent(searchQuery.trim())}`);
+            setSearchOpen(false);
+            setSearchQuery('');
+        }
+    };
 
     const svnEditProducts = [
         { name: 'Celestial Solitaire Ring', slug: 'celestial-solitaire-ring' },
@@ -148,11 +159,17 @@ export default function Header() {
                 {searchOpen && (
                     <div className="header__search glass">
                         <div className="container">
-                            <div className="header__search-inner">
+                            <form className="header__search-inner" onSubmit={handleSearchSubmit}>
                                 <Search size={20} />
-                                <input type="text" placeholder="Search for rings, necklaces, earrings..." autoFocus />
-                                <button onClick={() => setSearchOpen(false)}><X size={20} /></button>
-                            </div>
+                                <input 
+                                    type="text" 
+                                    placeholder="Search for rings, necklaces, earrings..." 
+                                    value={searchQuery}
+                                    onChange={e => setSearchQuery(e.target.value)}
+                                    autoFocus 
+                                />
+                                <button type="button" onClick={() => setSearchOpen(false)}><X size={20} /></button>
+                            </form>
                         </div>
                     </div>
                 )}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Minus, Plus, X, ArrowRight, ShoppingBag, Tag } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
@@ -7,6 +7,7 @@ import './CartPage.css';
 
 export default function CartPage() {
     const { cart, cartTotal, promoCode, promoDiscount, dispatch } = useStore();
+    const navigate = useNavigate();
     const [promoInput, setPromoInput] = useState('');
     const [promoError, setPromoError] = useState('');
 
@@ -148,7 +149,7 @@ export default function CartPage() {
                             </p>
                         )}
 
-                        <button className="btn btn-primary cart-summary__checkout">
+                        <button onClick={() => navigate('/checkout')} className="btn btn-primary cart-summary__checkout">
                             Proceed to Checkout
                         </button>
 

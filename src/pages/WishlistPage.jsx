@@ -2,15 +2,21 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Heart, ShoppingBag, ArrowRight, X } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
+import products from '../data/products';
 import './WishlistPage.css';
 
 export default function WishlistPage() {
     const { wishlist, dispatch, toggleWishlist } = useStore();
 
     const moveToCart = (item) => {
+        const fullProduct = products.find(p => p.id === item.id);
+        const defaultSize = fullProduct && fullProduct.sizes && fullProduct.sizes.length > 0
+            ? fullProduct.sizes[0]
+            : 'One Size';
+
         dispatch({
             type: 'ADD_TO_CART',
-            payload: { id: item.id, name: item.name, price: item.price, image: item.image, size: 'One Size', slug: item.slug },
+            payload: { id: item.id, name: item.name, price: item.price, image: item.image, size: defaultSize, slug: item.slug },
         });
         toggleWishlist(item);
     };

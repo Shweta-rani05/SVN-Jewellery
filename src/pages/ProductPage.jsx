@@ -17,7 +17,9 @@ export default function ProductPage() {
     const [selectedSize, setSelectedSize] = useState('');
     const [quantity, setQuantity] = useState(1);
     const [careOpen, setCareOpen] = useState(false);
+    const [careInitialTab, setCareInitialTab] = useState('care');
     const [pincode, setPincode] = useState('');
+    const [pincodeError, setPincodeError] = useState('');
     const [shippingInfo, setShippingInfo] = useState(null);
 
     if (!product) {
@@ -49,18 +51,29 @@ export default function ProductPage() {
         });
     };
 
+    const handlePincodeChange = (e) => {
+        const val = e.target.value.replace(/\D/g, '').slice(0, 6);
+        setPincode(val);
+        setPincodeError('');
+        setShippingInfo(null);
+    };
+
     const checkShipping = () => {
-        if (pincode.length >= 5) {
-            const total = product.price * quantity;
-            const isFree = total >= 2999;
-            const days = Math.floor(Math.random() * 3) + 3;
-            setShippingInfo({
-                available: true,
-                deliveryDate: new Date(Date.now() + days * 86400000).toLocaleDateString('en-IN', { weekday: 'long', month: 'short', day: 'numeric' }),
-                cost: isFree ? 0 : 99,
-                isFree,
-            });
+        if (!/^\d{6}$/.test(pincode)) {
+            setPincodeError('Please enter a valid 6-digit pincode');
+            setShippingInfo(null);
+            return;
         }
+        setPincodeError('');
+        const total = product.price * quantity;
+        const isFree = total >= 2999;
+        const days = Math.floor(Math.random() * 3) + 3;
+        setShippingInfo({
+            available: true,
+            deliveryDate: new Date(Date.now() + days * 86400000).toLocaleDateString('en-IN', { weekday: 'long', month: 'short', day: 'numeric' }),
+            cost: isFree ? 0 : 99,
+            isFree,
+        });
     };
 
     return (
@@ -156,7 +169,23 @@ export default function ProductPage() {
 
                         {/* Size Selector */}
                         <div className="product-info__section">
-                            <h4>Select {product.category === 'rings' ? 'Ring Size' : product.category === 'necklaces' ? 'Chain Length' : 'Size'}</h4>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-xs)' }}>
+                                <h4 style={{ margin: 0 }}>Select {product.category === 'rings' ? 'Ring Size' : product.category === 'necklaces' ? 'Chain Length' : 'Size'}</h4>
+                                <button 
+                                    onClick={() => { setCareInitialTab('size'); setCareOpen(true); }}
+                                    style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        color: 'var(--gold-400)',
+                                        fontSize: '0.8rem',
+                                        textDecoration: 'underline',
+                                        cursor: 'pointer',
+                                        padding: 0
+                                    }}
+                                >
+                                    Size Guide
+                                </button>
+                            </div>
                             <div className="size-options">
                                 {product.sizes.map(size => (
                                     <button
@@ -196,10 +225,10 @@ export default function ProductPage() {
                         </div>
 
                         {/* Jewelry Care */}
-                        <button className="care-link" onClick={() => setCareOpen(true)}>
+                        <button className="care-link" onClick={() => { setCareInitialTab('care'); setCareOpen(true); }}>
                             <Info size={14} /> How to Care for Your Jewelry
                         </button>
-
+ 
                         {/* Shipping Calculator */}
                         <div className="shipping-calc">
                             <h4><Truck size={16} /> Check Delivery</h4>
@@ -207,13 +236,18 @@ export default function ProductPage() {
                                 <MapPin size={16} />
                                 <input
                                     type="text"
-                                    placeholder="Enter pincode"
+                                    placeholder="Enter 6-digit pincode"
                                     value={pincode}
-                                    onChange={e => setPincode(e.target.value)}
+                                    onChange={handlePincodeChange}
                                     maxLength={6}
                                 />
                                 <button onClick={checkShipping}>Check</button>
                             </div>
+                            {pincodeError && (
+                                <p style={{ color: '#ef4444', fontSize: '0.8rem', marginTop: '8px', textAlign: 'left' }}>
+                                    ⚠️ {pincodeError}
+                                </p>
+                            )}
                             {shippingInfo && (
                                 <div className="shipping-calc__result">
                                     {shippingInfo.available ? (
@@ -250,7 +284,7 @@ export default function ProductPage() {
                 )}
             </div>
 
-            <CareGuideModal isOpen={careOpen} onClose={() => setCareOpen(false)} />
+            <CareGuideModal isOpen={careOpen} onClose={() => setCareOpen(false)} initialTab={careInitialTab} />
         </div>
     );
 }

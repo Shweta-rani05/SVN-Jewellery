@@ -48,8 +48,8 @@ const products = [
     },
     sizes: ["16 inch", "18 inch", "20 inch"],
     images: [
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
-      "https://images.unsplash.com/photo-1515562141589-67f0d569b74e?w=800&q=80",
+      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=800&q=80",
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
       "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=800&q=80",
       "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80"
     ],
@@ -161,9 +161,9 @@ const products = [
     sizes: ["16 inch", "18 inch", "20 inch"],
     images: [
       "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
       "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
-      "https://images.unsplash.com/photo-1515562141589-67f0d569b74e?w=800&q=80"
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
+      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=800&q=80"
     ],
     onPersonImage: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80"
   },
@@ -272,8 +272,8 @@ const products = [
     },
     sizes: ["16+18 inch (Pre-layered)"],
     images: [
-      "https://images.unsplash.com/photo-1515562141589-67f0d569b74e?w=800&q=80",
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
+      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=800&q=80",
       "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=800&q=80",
       "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80"
     ],
@@ -333,7 +333,6 @@ const products = [
       "https://images.unsplash.com/photo-1600721391689-2564bb8055de?w=800&q=80",
       "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80"
     ],
-    onPersonImage: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&q=80"
   }
 ];
 
@@ -343,11 +342,7 @@ export const categories = [
   { slug: 'rings', name: 'Rings', image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80' },
   { slug: 'earrings', name: 'Earrings', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80' },
   { slug: 'bracelets', name: 'Bracelets', image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&q=80' },
-  { slug: 'pendants', name: 'Pendants', image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80' },
-  { slug: 'chains', name: 'Chains', image: 'https://images.unsplash.com/photo-1515562141589-67f0d569b74e?w=600&q=80' },
-  { slug: 'bangles', name: 'Bangles', image: 'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&q=80' },
-  { slug: 'sets', name: 'Sets', image: 'https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&q=80' },
-  { slug: 'personalised', name: 'Personalised', image: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&q=80' },
+  { slug: 'necklaces', name: 'Necklaces', image: 'https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&q=80' },
 ];
 
 export const occasions = [
@@ -362,5 +357,5 @@ export const instagramPosts = [
   { id: 3, image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&q=80', productId: 3 },
   { id: 4, image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80', productId: 4 },
   { id: 5, image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400&q=80', productId: 5 },
-  { id: 6, image: 'https://images.unsplash.com/photo-1515562141589-67f0d569b74e?w=400&q=80', productId: 6 },
+  { id: 6, image: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&q=80', productId: 6 },
 ];
