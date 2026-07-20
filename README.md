@@ -35,6 +35,7 @@ Persistent cart & wishlist
 Type-safe architecture
 Luxury motion UI
 Real-world ecommerce logic
+AI-powered Shopping Concierge
 
 ## 🚀 Live Demo
 
@@ -94,7 +95,7 @@ Others (Git and Github)
 ### 3. Business Logic & Reliability
 
 * **Abandoned Cart Recovery:** Backend logic designed to trigger automated reminders for uncompleted checkouts.
-* **Trust Signals:** Integrated WhatsApp Chat API for boutique-style customer support and real-time shipping calculation based on user input.
+* **AI Concierge:** Integrated intelligent virtual assistant offering a Style Finder, personalized recommendations, and a guided shopping flow for boutique-style customer support.
 
 ---
 
