@@ -28,9 +28,9 @@
 .checkout-form h3 {
     font-family: var(--font-serif);
     font-size: 1.3rem;
-    color: var(--white-100);
+    color: var(--text-primary);
     margin-bottom: var(--space-sm);
-    border-bottom: 1px solid var(--white-10);
+    border-bottom: 1px solid var(--border-default);
     padding-bottom: var(--space-sm);
 }
 
@@ -48,16 +48,16 @@
 
 .form-group label {
     font-size: 0.85rem;
-    color: var(--white-70);
+    color: var(--text-secondary);
     font-weight: 500;
 }
 
 .form-group input {
     padding: var(--space-md);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--white-10);
+    background: var(--bg-input);
+    border: 1px solid var(--border-default);
     border-radius: var(--radius-md);
-    color: var(--white-100);
+    color: var(--text-primary);
     font-family: inherit;
     font-size: 0.95rem;
     transition: all var(--transition-base);
@@ -66,7 +66,7 @@
 .form-group input:focus {
     outline: none;
     border-color: var(--gold-400);
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--surface-active);
 }
 
 .form-group .input-error {
@@ -92,20 +92,20 @@
     align-items: flex-start;
     gap: var(--space-md);
     padding: var(--space-lg);
-    border: 1px solid var(--white-10);
+    border: 1px solid var(--border-default);
     border-radius: var(--radius-md);
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.02);
+    background: transparent;
     transition: all var(--transition-base);
 }
 
 .payment-option:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--surface-hover);
 }
 
 .payment-option.active {
     border-color: var(--gold-400);
-    background: rgba(212, 175, 55, 0.05);
+    background: rgba(212, 168, 67, 0.05);
 }
 
 .payment-option input[type="radio"] {
@@ -116,7 +116,7 @@
 .payment-option__details {
     display: flex;
     gap: var(--space-md);
-    color: var(--white-80);
+    color: var(--text-secondary);
 }
 
 .payment-option__details svg {
@@ -127,13 +127,13 @@
 .payment-option__details strong {
     display: block;
     font-size: 0.95rem;
-    color: var(--white-100);
+    color: var(--text-primary);
     margin-bottom: 2px;
 }
 
 .payment-option__details p {
     font-size: 0.8rem;
-    color: var(--white-50);
+    color: var(--text-muted);
     line-height: 1.4;
 }
 
@@ -156,7 +156,7 @@
 .checkout-summary h3 {
     font-family: var(--font-serif);
     font-size: 1.3rem;
-    color: var(--white-100);
+    color: var(--text-primary);
     margin-bottom: var(--space-lg);
 }
 
@@ -194,18 +194,18 @@
 .item-name {
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--white-90);
+    color: var(--text-primary);
 }
 
 .item-qty-size {
     font-size: 0.75rem;
-    color: var(--white-50);
+    color: var(--text-faint);
 }
 
 .item-price {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--white-90);
+    color: var(--text-primary);
 }
 
 .checkout-summary__lines {
@@ -219,7 +219,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
-    color: var(--white-70);
+    color: var(--text-secondary);
 }
 
 .checkout-summary__line--discount {
@@ -228,14 +228,14 @@
 
 .checkout-summary__divider {
     height: 1px;
-    background: var(--white-10);
+    background: var(--border-default);
     margin: var(--space-xs) 0;
 }
 
 .checkout-summary__line--total {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--white-100);
+    color: var(--text-primary);
 }
 
 .checkout-summary__trust {
@@ -244,9 +244,9 @@
     justify-content: center;
     gap: var(--space-xs);
     font-size: 0.8rem;
-    color: var(--white-40);
+    color: var(--text-faint);
     text-align: center;
-    border-top: 1px solid var(--white-10);
+    border-top: 1px solid var(--border-default);
     padding-top: var(--space-md);
 }
 

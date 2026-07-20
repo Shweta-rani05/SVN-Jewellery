@@ -102,7 +102,7 @@ export default function CareGuideModal({ isOpen, onClose, initialTab = 'care' })
                         </div>
                         <div className="size-guide__section" style={{ marginTop: 'var(--space-md)' }}>
                             <h4>📏 Necklaces & Bracelets</h4>
-                            <p style={{ fontSize: '0.85rem', color: 'var(--white-70)', marginBottom: 'var(--space-sm)' }}>
+                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: 'var(--space-sm)' }}>
                                 <strong>Necklace Chains:</strong> Available in 16" (choker fit), 18" (standard collarbone fit), and 20" lengths.<br/>
                                 <strong>Bracelets:</strong> Standard lengths of 6.5", 7", and 7.5". Cuffs are adjustable.
                             </p>

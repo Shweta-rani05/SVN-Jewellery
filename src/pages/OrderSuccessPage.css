@@ -54,18 +54,18 @@
 .success-title {
     font-family: var(--font-serif);
     font-size: 2.2rem;
-    color: var(--white-100);
+    color: var(--text-primary);
     margin-bottom: var(--space-xs);
 }
 
 .success-subtitle {
     font-size: 1.1rem;
-    color: var(--white-80);
+    color: var(--text-secondary);
 }
 
 .order-details {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--white-10);
+    background: var(--bg-input);
+    border: 1px solid var(--border-default);
     border-radius: var(--radius-md);
     padding: var(--space-lg);
     margin: var(--space-xl) 0;
@@ -78,16 +78,16 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.95rem;
-    color: var(--white-70);
+    color: var(--text-secondary);
 }
 
 .order-detail-row strong {
-    color: var(--white-100);
+    color: var(--text-primary);
 }
 
 .success-info-text {
     font-size: 0.9rem;
-    color: var(--white-50);
+    color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: var(--space-2xl);
 }

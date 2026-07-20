@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+import AIConcierge from './components/AIConcierge';
 import AbandonedCartToast from './components/AbandonedCartToast';
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
@@ -35,7 +35,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-      <WhatsAppButton />
+      <AIConcierge />
       <AbandonedCartToast />
     </>
   );

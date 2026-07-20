@@ -14,7 +14,7 @@
 }
 
 .breadcrumb a {
-    color: var(--white-50);
+    color: var(--text-muted);
     text-transform: capitalize;
 }
 
@@ -23,11 +23,11 @@
 }
 
 .breadcrumb span {
-    color: var(--white-90);
+    color: var(--text-primary);
 }
 
 .breadcrumb svg {
-    color: var(--white-30);
+    color: var(--text-faint);
 }
 
 /* Layout */
@@ -143,7 +143,7 @@
 }
 
 .product-info__reviews {
-    color: var(--white-30);
+    color: var(--text-faint);
     font-size: 0.85rem;
     margin-left: 4px;
 }
@@ -158,13 +158,13 @@
 .product-info__current {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--text-primary);
     font-family: var(--font-serif);
 }
 
 .product-info__mrp {
     font-size: 1.1rem;
-    color: var(--white-30);
+    color: var(--text-faint);
     text-decoration: line-through;
 }
 
@@ -178,15 +178,15 @@
 }
 
 .product-info__tax {
-    color: var(--white-30);
+    color: var(--text-faint);
     font-size: 0.8rem;
     margin-bottom: var(--space-xl);
 }
 
 /* Material Specs */
 .material-specs {
-    background: var(--navy-800);
-    border: 1px solid var(--white-10);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-default);
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
     margin-bottom: var(--space-xl);
@@ -214,14 +214,14 @@
 
 .material-spec {
     padding: var(--space-sm);
-    background: var(--white-05);
+    background: var(--bg-input);
     border-radius: var(--radius-sm);
 }
 
 .material-spec__label {
     display: block;
     font-size: 0.7rem;
-    color: var(--white-30);
+    color: var(--text-faint);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 2px;
@@ -229,7 +229,7 @@
 
 .material-spec__value {
     font-size: 0.82rem;
-    color: var(--white-90);
+    color: var(--text-primary);
     font-weight: 500;
 }
 
@@ -255,7 +255,7 @@
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--white-70);
+    color: var(--text-secondary);
     margin-bottom: var(--space-sm);
 }
 
@@ -267,9 +267,9 @@
 
 .size-option {
     padding: 8px 16px;
-    border: 1px solid var(--white-20);
+    border: 1px solid var(--border-strong);
     border-radius: var(--radius-md);
-    color: var(--white-70);
+    color: var(--text-secondary);
     font-size: 0.85rem;
     transition: all var(--transition-fast);
     background: transparent;
@@ -290,7 +290,7 @@
 .quantity-selector {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--white-20);
+    border: 1px solid var(--border-strong);
     border-radius: var(--radius-md);
     overflow: hidden;
 }
@@ -301,13 +301,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white-70);
+    color: var(--text-secondary);
     transition: all var(--transition-fast);
 }
 
 .quantity-selector button:hover {
-    background: var(--white-10);
-    color: var(--white);
+    background: var(--surface-hover);
+    color: var(--text-primary);
 }
 
 .quantity-selector span {
@@ -315,9 +315,9 @@
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
-    color: var(--white);
-    border-left: 1px solid var(--white-10);
-    border-right: 1px solid var(--white-10);
+    color: var(--text-primary);
+    border-left: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-default);
     line-height: 40px;
 }
 
@@ -338,11 +338,11 @@
     width: 52px;
     height: 52px;
     border-radius: var(--radius-md);
-    border: 1px solid var(--white-20);
+    border: 1px solid var(--border-strong);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white-50);
+    color: var(--text-muted);
     transition: all var(--transition-fast);
 }
 
@@ -373,8 +373,8 @@
 
 /* Shipping Calculator */
 .shipping-calc {
-    background: var(--navy-800);
-    border: 1px solid var(--white-10);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-default);
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
     margin-bottom: var(--space-xl);
@@ -387,7 +387,7 @@
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--white-90);
+    color: var(--text-primary);
     margin-bottom: var(--space-md);
 }
 
@@ -395,27 +395,27 @@
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    background: var(--white-05);
-    border: 1px solid var(--white-10);
+    background: var(--bg-input);
+    border: 1px solid var(--border-default);
     border-radius: var(--radius-md);
     padding: 0 var(--space-md);
 }
 
 .shipping-calc__input svg {
-    color: var(--white-30);
+    color: var(--text-faint);
     flex-shrink: 0;
 }
 
 .shipping-calc__input input {
     flex: 1;
     background: transparent;
-    color: var(--white);
+    color: var(--text-primary);
     padding: var(--space-sm) var(--space-sm);
     font-size: 0.9rem;
 }
 
 .shipping-calc__input input::placeholder {
-    color: var(--white-30);
+    color: var(--text-faint);
 }
 
 .shipping-calc__input button {
@@ -433,13 +433,13 @@
     margin-top: var(--space-md);
     padding: var(--space-sm);
     font-size: 0.85rem;
-    color: var(--white-70);
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
 /* Description */
 .product-description {
-    border-top: 1px solid var(--white-10);
+    border-top: 1px solid var(--border-default);
     padding-top: var(--space-xl);
 }
 
@@ -447,21 +447,21 @@
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--white-70);
+    color: var(--text-secondary);
     margin-bottom: var(--space-md);
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
 
 .product-description p {
-    color: var(--white-50);
+    color: var(--text-muted);
     font-size: 0.9rem;
     line-height: 1.8;
 }
 
 /* Related */
 .related-section {
-    border-top: 1px solid var(--white-05);
+    border-top: 1px solid var(--border-subtle);
     margin-top: var(--space-3xl);
 }
 
