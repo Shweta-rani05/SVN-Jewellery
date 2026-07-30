@@ -1,6 +1,6 @@
 # 💍 SVN Jewellery
 
-<p align="center"> <b>Wear Your Glow </b> </p> <p align="center"> SVN Jewellery is a modern e-commerce platform designed to deliver an affordable luxury shopping experience through an elegant and responsive interface. Built using MERN + TypeScript, it showcases scalable architecture, smooth UI interactions, and real-world shopping workflows. </p>
+<p align="center"> <b>Wear Your Glow </b> </p> <p align="center"> SVN Jewellery is a modern e-commerce platform designed to deliver an affordable luxury shopping experience through an elegant and responsive interface. Built using the MERN stack (React + Node.js/Express) with a TypeScript backend, it showcases scalable architecture, smooth UI interactions, and real-world shopping workflows. </p>
 
 
 🌟 Brand Identity
@@ -45,16 +45,16 @@ AI-powered Shopping Concierge
 
 | Layer | Technology |
 | --- | --- |
-| **Frontend** | Next.js 15 (App Router), TypeScript, Tailwind CSS |
+| **Frontend** | React (Vite), JavaScript |
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-| **Backend** | Node.js, Express, Typegoose (Mongoose with TS) |
+| **Backend** | Node.js, Express, TypeScript, Typegoose |
 
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Typegoose](https://img.shields.io/badge/Typegoose-DD0031?style=for-the-badge)
 
 | **Database** | MongoDB Atlas |
@@ -80,11 +80,11 @@ Others (Git and Github)
 
 ## 💎 Key Technical Features
 
-### 1. Advanced Engineering (MERN + TypeScript)
+### 1. Advanced Engineering (MERN Stack)
 
 * **Dynamic Product Variants:** Engineered a robust data model using **Typegoose** to handle nested variants (e.g., ring sizes 5-9, metal finishes like 18K Gold vs. 925 Silver) with independent pricing and stock logic.
-* **Type-Safe Architecture:** Centralized TypeScript interfaces for Products, Users, and Orders to ensure data integrity across the frontend and backend.
-* **Persistent Cart & Wishlist:** Implemented using **Zustand** to ensure a seamless user experience that persists across page refreshes and sessions.
+* **Type-Safe Backend Architecture:** Centralized TypeScript interfaces and Zod validation for Users and Orders to ensure data integrity.
+* **Persistent State Management:** Implemented context/state management to ensure a seamless user experience that persists across page refreshes and sessions.
 
 ### 2. High-Conversion UI/UX
 
@@ -103,15 +103,19 @@ Others (Git and Github)
 ## 📂 Project Structure
 
 ```bash
-/src
-  /app          # Next.js 15 App Router (Pages & API Routes)
-  /components
-    /ui         # Reusable atomic components (Buttons, Modals, Inputs)
-    /features   # Complex modules (Cart, FilterEngine, ProductCard)
-  /hooks        # Custom hooks (useCart, useAuth, useLocalStorage)
-  /lib          # Configurations (MongoDB connection, Stripe client, Cloudinary)
-  /types        # Centralized TypeScript Interfaces (IProduct, IUser, ICart)
-
+/
+  /src              # React Frontend (Vite)
+    /components     # Reusable UI components
+    /pages          # Page components
+    /context        # React context for state management
+    /services       # API and backend communication
+  /server           # Express Backend (TypeScript)
+    /src
+      /controllers  # Request handlers
+      /models       # Typegoose models
+      /repositories # Database interaction logic
+      /routes       # API routes
+      /middleware   # Custom middleware (Auth, Error handling)
 ```
 
 ---
